@@ -42,8 +42,8 @@
          s 0]
     (if (<= b n)
         (recur (+ b c)
-               (+ c (+ b c))
-               (+ (+ b c) (+ c (+ b c)))
+               (+ b c c)
+               (+ b b c c c)
                (+ s c))
       s)))
 
