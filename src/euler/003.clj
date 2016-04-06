@@ -4,7 +4,7 @@
 ;;
 ;; What is the largest prime factor of the number 600851475143 ?
 
-;;(use 'clojure.math.numeric-tower)
+(ns euler.003)
 
 ;; implementation
 (defn largest-prime-factor-of [n]
@@ -13,6 +13,3 @@
     (cond (= f i) f
           (= (rem i f) 0) (recur f (quot i f))
           :else (recur (+ f 1) i))))
-
-;; execution
-(largest-prime-factor-of 600851475143)

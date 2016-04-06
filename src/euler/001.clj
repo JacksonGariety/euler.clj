@@ -6,9 +6,8 @@
 ;; of these multiples is 23. Find the sum of all the
 ;; multiples of 3 or 5 below 1000.
 
+(ns euler.001)
+
 ;; implementation
 (defn sum-of-multiples-of-three-or-five-below [n]
   (reduce + (set (concat (range 0 n 3) (range 0 n 5)))))
-
-;; execution
-(sum-of-multiples-of-three-or-five-below 1000)
