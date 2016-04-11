@@ -42,7 +42,3 @@
             (lazy-seq (next-primes (next-sieve sieve candidate)
                                    (+ candidate 2))))))
   (nth (cons 2 (lazy-seq (next-primes {} 3))) (- n 1)))
-
-(println (time (nth-prime 10001)))
-
-;; (println (time (nth-prime 10001)))
