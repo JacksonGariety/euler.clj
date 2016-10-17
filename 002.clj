@@ -18,8 +18,6 @@
 ;; a rather imperative fashion. It's not terribly
 ;; efficient
 
-(ns euler.002)
-
 (defn sum-of-even-fibonaccis-below [n]
   (loop [a 1
          b 2
@@ -69,3 +67,5 @@
 ;; (print "1: ")(time (dotimes [n 10000] (sum-of-even-fibonaccis-below 4000000)));; -> "Elapsed time: ~11 msecs"
 ;; (print "2: ")(time (dotimes [n 10000] (sum-of-even-fibonaccis-below-2 4000000)));; -> "Elapsed time: ~6 msecs"
 ;; (print "3: ")(time (dotimes [n 10000] (sum-of-even-fibonaccis-below-3 4000000)));; -> "Elapsed time: ~95 msecs"
+
+(print (time (sum-of-even-fibonaccis-below-2 4000000)))

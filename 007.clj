@@ -8,9 +8,6 @@
 ;;
 ;; What is the 10,001st prime number?
 
-(ns euler.007)
-
-
 ;; (defn nth-prime [n]
 ;;   (defn prime? [n]
 ;;     (.isProbablePrime (biginteger n) 10))
@@ -42,3 +39,5 @@
             (lazy-seq (next-primes (next-sieve sieve candidate)
                                    (+ candidate 2))))))
   (nth (cons 2 (lazy-seq (next-primes {} 3))) (- n 1)))
+
+(print (time (nth-prime 10001)))

@@ -12,10 +12,9 @@
 ;; Find the difference between the sum of the squares of the first one
 ;; hundred natural numbers and the square of the sum.
 
-(ns euler.006)
-
 (defn sum-square-difference [s]
   (let [square #(* % %)]
     (- (square (reduce + s))
        (reduce + (map square s)))))
 
+(print (time (sum-square-difference (range 101))))

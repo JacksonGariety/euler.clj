@@ -20,8 +20,7 @@
 ;; 1 to infinity and going over the sequence produced
 ;; by (range 1 21). It's really slow.
 
-(ns euler.005
-  (:require [clojure.math.numeric-tower :as Math]))
+(require '[clojure.math.numeric-tower :as Math])
 
 (defn smallest-divisible-by [s]
   (reduce #(Math/lcm %1 %2) s))
@@ -30,3 +29,5 @@
 ;; I didn't think to use the lcm function until
 ;; I looked it up. On top of that, I don't
 ;; remember exactly why this is so much faster!
+
+(print (time (smallest-divisible-by (range 1 21))))

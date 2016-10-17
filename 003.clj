@@ -4,8 +4,6 @@
 ;;
 ;; What is the largest prime factor of the number 600851475143 ?
 
-(ns euler.003)
-
 ;; implementation
 (defn largest-prime-factor-of [n]
   (loop [f 2
@@ -13,3 +11,5 @@
     (cond (= f i) f
           (= (rem i f) 0) (recur f (quot i f))
           :else (recur (+ f 1) i))))
+
+(print (time (largest-prime-factor-of 600851475143)))

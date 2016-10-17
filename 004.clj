@@ -7,8 +7,6 @@
 ;; Find the largest palindrome made from the
 ;; product of two 3-digit numbers.
 
-(ns euler.004)
-
 ;; implementation
 (defn largest-palindrome []
   (last (sort (filter #(let [l (seq (str %))]
@@ -18,3 +16,4 @@
                             :when (>= y x)]
                         (* x y))))))
 
+(print (time (largest-palindrome)))
