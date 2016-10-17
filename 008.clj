@@ -1,5 +1,3 @@
-(ns euler.008)
-
 ;; first implementation
 ;; kinda slow :-(
 ;;
